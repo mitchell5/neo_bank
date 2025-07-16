@@ -1,0 +1,246 @@
+    1  gh auth login -s 'user:email' -w
+    2  gh auth status
+    3  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list\nsudo apt-get install apt-transport-https ca-certificates gnupg\ncurl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -\nsudo apt-get update && sudo apt-get install google-cloud-sdk\nsudo apt-get install google-cloud-sdk-app-engine-python
+    4  mkdir test_directory
+    5  git add . 
+    6  git status
+    7  mkdir test_directory
+    8  git add .
+    9  git status
+   10  git add 
+   11  git add . 
+   12  git status
+   13  git commit -m "testing by emma"
+   14  touch test_emma.txt
+   15  git add . 
+   16  git status
+   17  git commit -m "test by emma"
+   18  git push
+   19  clear
+   20  mkdir -p ~/projects && cd ~/projects
+   21  git clone git@github.com:Linchenpal/neo_bank.git
+   22  cd neo_bank
+   23  git status
+   24  poetry init -n 
+   25  curl -sSL https://install.python-poetry.org | python3 -
+   26  git --version
+   27  git clone https://github.com/Linchenpal/neo_bank.git
+   28  ls
+   29  clear
+   30  mkdir -p dbt/models/{staging,intermediate,marts/{dims,facts}} scripts metabase\ntouch dbt/.gitkeep metabase/.gitkeep
+   31  poetry init -n
+   32  curl -sSL https://install.python-poetry.org | python3 -
+   33  export PATH="$HOME/.local/bin:$PATH"
+   34  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc\nsource ~/.zshrc
+   35  poetry --version
+   36  poetry init -n
+   37  tree
+   38  poetry add pandas
+   39  poetry shell
+   40  git add .\ngit commit -m "Init poetry, install dbt deps, create project structure"\ngit push origin main
+   41  tree
+   42  cd neo_bank
+   43  code .
+   44  clear
+   45  tree
+   46  pwd
+   47  cd ..
+   48  ls
+   49  projects
+   50  ls
+   51  neo_bank
+   52  ls
+   53  rm -rf ~/projects\nrm -rf ~/neo_bank
+   54  pwd
+   55  ls
+   56  cd ..
+   57  pwd
+   58  clear
+   59  pwd
+   60  cd ~\nclear
+   61  pwd
+   62  cd neo_bank\nls
+   63  pwd
+   64  ls
+   65  cd test_directory
+   66  ls
+   67  cd 
+   68  pwd
+   69  ls
+   70  mkdir -p ~/projects\ncd ~/projects
+   71  git clone git@github.com:Linchenpal/neo_bank.git\ncd neo_b
+   72  ls
+   73  git status
+   74  cd neo_bank
+   75  git rev-parse --show-toplevel
+   76  ls -a ~ | grep .git
+   77  rm -rf ~/.git
+   78  ls
+   79  git status
+   80  poetry install
+   81  code .
+   82  clear
+   83  poetry install
+   84  git stats
+   85  git status
+   86  git config --global --list
+   87  git config user.name "Lina"
+   88  git config user.email "linam.palacios@gmail.com"
+   89  git add pyproject.toml
+   90  git commit -m "update .toml "
+   91  git push origin main
+   92  gti add README.md
+   93  git add README.md
+   94  git commit -m " upadte readme"
+   95  git push origin main
+   96  clear
+   97  touch SETUP.md
+   98  pwd
+   99  touch SETUP.md
+  100  pwd
+  101  ls
+  102  cd neo_bank
+  103  pwd
+  104  cd ..
+  105  ls
+  106  cd neo_bank
+  107  touch SETUP.md
+  108  code .
+  109  code
+  110  ls
+  111  pwd
+  112  ls
+  113  projects
+  114  ls
+  115  cd neo_bank
+  116  ls
+  117  clear
+  118  code .
+  119  clear
+  120  git add SETUP.md
+  121  git commit -m " setup documentation"
+  122  git push origin main
+  123  ls
+  124  cd projects
+  125  la
+  126  ls
+  127  cd neo_bank
+  128  code . 
+  129  git pull upstream main -X ours
+  130  mkdir data_exploration
+  131  cd data_exploration/
+  132  poetry init
+  133  mkdir raw_data
+  134  cd ..
+  135  mkdir raw_data
+  136  cd data_exploration
+  137  great_exepcations init
+  138  great_expecations init
+  139  great_expectations init
+  140  touch exploration.ipynb
+  141  poetry add notebook ipykernel\n
+  142  python -m ipykernel install --user --name=my-jupyter-env --display-name "Python (Poetry)"\n
+  143  poetry shell\n
+  144  poetry env info --path\n
+  145  source $(poetry env info --path)/bin/activate\n
+  146  python -m ipykernel install --user --name=my-jupyter-env --display-name "Python (Poetry)"\n
+  147  poetry add pandas
+  148  poetry env remove $(poetry env list --full-path | head -n 1)\n
+  149  cd ..
+  150  deactivate\n
+  151  rm -rf .venv\n
+  152  poetry env list\n
+  153  cd data_exploration
+  154  poetry env list\n
+  155  poetry env remove <env-name>\n
+  156  poetry env remove data-exploration-H49HWJRV-py3.10\n
+  157  rm pyproject.toml poetry.lock\n
+  158  jupyter kernelspec list
+  159  poetry init
+  160  poetry add pandas\n
+  161  poetry run python -c "import pandas as pd; print(pd.__version__)"\n
+  162  poetry env info --path\n
+  163  poetry add ipykernel\n
+  164  poetry show ipykernel\n
+  165  poetry env info --path\n
+  166  git add . 
+  167  git status
+  168  git commit -m "trying to start data exploration"
+  169  git push
+  170  cd data_exploration
+  171  code . 
+  172  poetry add great-expectations\n
+  173  poetry update 
+  174  poetry add great-expectations\n
+  175  poetry update
+  176  poetry add great-expectations\n
+  177  great_expectations init
+  178  great-expectations init
+  179  poetry update
+  180  poetry run great_expectations init\n
+  181  poetry run great-expectations init\n
+  182  poetry update
+  183  poetry run great-expectations init\n
+  184  poetry update great-expectations
+  185  poetry run great_expectations init
+  186  great_expectations suite --help
+  187  poetry run great_expectations suite --help
+  188  poetry run great-expectations suite --help
+  189  cd ..
+  190  ls
+  191  code . 
+  192  cd ..
+  193  ls
+  194  mkdir cleaned_data
+  195  cd data_exploration
+  196  cd ,,
+  197  cd ..
+  198  code .
+  199  cd data_exploration
+  200  poetry install pyarrow
+  201  poetry add pyarrow
+  202  cd data_exploration
+  203  code .
+  204* ls
+  205  cd data_exploration/code . 
+  206* cd projects
+  207* ls
+  208  cd data_exploration
+  209  code . 
+  210* cd neobank
+  211* cd neo_bank
+  212* clear
+  213* poetry add google-cloud-storage
+  214* pwd
+  215* export GOOGLE_APPLICATION_CREDENTIALS="/home/neobanking2025/projects/neo_bank/data_exploration/sacred-choir-466017-s9-2d02c66f6d7a.json"\n
+  216* echo $GOOGLE_APPLICATION_CREDENTIALS
+  217* touch upload_to_gcp.py
+  218* cat /path/to/your-key.json | grep client_email\n
+  219* clear
+  220* cat /home/neobanking2025/projects/neo_bank/data_exploration/sacred-choir-466017-s9-2d02c66f6d7a.json\ | grep client_email\n
+  221* cat sacred-choir-466017-s9-2d02c66f6d7a.json | grep client_email\n
+  222* gsutil ls -L -b gs://neobank_data_bucket\n
+  223* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/devices.parquet gs://neobank_data_bucket/staging_data/
+  224* gcloud auth activate-service-account --key-file=sacred-choir-466017-s9-2d02c66f6d7a.json\n
+  225* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/devices.parquet gs://neobank_data_bucket/staging_data/
+  226* gcloud config set sacred-choir-466017-s9 
+  227* gcloud config set project sacred-choir-466017-s9 
+  228* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/devices.parquet gs://neobank_data_bucket/staging_data/
+  229* gcloud auth activate-service-account --key-file=sacred-choir-466017-s9-c7fdbf18a028.json\n
+  230* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/devices.parquet gs://neobank_data_bucket/staging_data/
+  231* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/transactions.parquet gs://neobank_data_bucket/staging_data/
+  232* gsutil cp /home/neobanking2025/projects/neo_bank/cleaned_data/users.parquet gs://neobank_data_bucket/staging_data/
+  233  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  234  cd ..
+  235  cd part_1-data_exploration
+  236  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  237  export HISTTIMEFORMAT="%F %T "\n
+  238  cat ~/.zshrc
+  239  nano  ~/.zshrc
+  240  source ~/.zshrc\n
+  241  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  242  history | tail -n 100\n
+  243  history | tail -n 500\n
+  244  history | tail -n 400\n
+  245  history | tail -n 350\n
+  246  history | tail -n 300\n

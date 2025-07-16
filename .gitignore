@@ -1,0 +1,7 @@
+# Data files
+*.csv
+*.parquet
+
+# Environment variables and credentials
+.env
+*.json
