@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_gz_data
+    tables:
+      - name: sales
+        identifier: raw_gz_sales
+        description: sales on Greenweez. One row per product_id found in each orders_id
+        columns:
+          - name: date_date
+            description: order date
+          - name: orders_id
+            description: order identifier - foreign key to ship table
+          - name: pdt_id
+            description: product identifier - foreign key to product table
+          - name: revenue
+            description: price paid by customer to purchase the products
+          - name: quantity
+            description: quantity of a product purchased in an order
+      - name: product
+        identifier: raw_gz_product
+        description: product from Greenweez. One row per products_id representing it's price
+        columns:
+          - name: products_id
+            description: product identifier - primary key
+            data_tests:
+              - unique
+              - not_null
+          - name: purchSE_PRICE
+            description: cost for Greenweez to obtain a single unit of the product
+      - name: ship
+        identifier: raw_gz_ship
+        description: costs of shipping for both Greenweez and customer, 1 row per order_id
+        columns:
+          - name: orders_id
+            description: order identifier - primary key
+            data_tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: fee customer pays for a shipping an order
+          - name: shipping_fee_1
+            description: fee customer pays for shipping an order
+          - name: logCost
+            description: Greenweez cost to preparing the parcel for delivery
+          - name: ship_cost
+            description: Greenweez shipping cost paid to logistics provider to deliver order
