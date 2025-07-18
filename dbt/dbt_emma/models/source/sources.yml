@@ -6,7 +6,7 @@ sources:
 
     tables:
       - name: devices
-        identifier: raw_devcies
+        identifier: raw_devices
         description: device type of user, one row per user_id
         columns:
           - name: device_type
