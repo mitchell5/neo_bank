@@ -2,3 +2,5 @@
 target/
 dbt_packages/
 logs/
+# But keep (do not ignore) logs that start with "zsh_commands"
+!zsh_commands*.log

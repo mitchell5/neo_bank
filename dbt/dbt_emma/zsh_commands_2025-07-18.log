@@ -1,0 +1,39 @@
+ 6178  2025-07-18 14:29  git checkout -b dbt-sources-step
+ 6179  2025-07-18 14:29  git fetch origin\n
+ 6180  2025-07-18 15:20  poetry run dbt test
+ 6181  2025-07-18 15:20  cd dbt_emma
+ 6182  2025-07-18 15:20  code . 
+ 6183  2025-07-18 15:21  poetry run dbt test
+ 6184  2025-07-18 15:21  cd ..
+ 6185  2025-07-18 15:21  ls
+ 6186  2025-07-18 15:21  cd dbt
+ 6187  2025-07-18 15:21  ls
+ 6188  2025-07-18 15:21  ls -al
+ 6189  2025-07-18 15:21  cd dbt_emma
+ 6190  2025-07-18 15:21  ls
+ 6191  2025-07-18 15:21  ls -al
+ 6192  2025-07-18 15:22  poetry init
+ 6193  2025-07-18 15:23  poetry add dbt-bigquery
+ 6194  2025-07-18 15:24  poetry dbt test
+ 6195  2025-07-18 15:24  poetry run dbt --version\n
+ 6196  2025-07-18 15:25  poetry run dbt test
+ 6197  2025-07-18 15:27  cat ~/.dbt/profiles.yml
+ 6198  2025-07-18 15:27  nano ~/.dbt/profiles.yml
+ 6199  2025-07-18 15:32  cat ~/.dbt/profiles.yml
+ 6200  2025-07-18 15:32  poetry run dbt debug\n
+ 6201  2025-07-18 15:37  cd /home/eberniczky/.gcp_keys
+ 6202  2025-07-18 15:37  ls -al
+ 6203  2025-07-18 15:45  code . 
+ 6204  2025-07-18 15:45  ls -al
+ 6205  2025-07-18 15:46  cat ~/.dbt/profiles.yml
+ 6206  2025-07-18 15:46  nano  ~/.dbt/profiles.yml
+ 6207  2025-07-18 15:47  cat ~/.dbt/profiles.yml
+ 6208  2025-07-18 15:47  cd ~
+ 6209  2025-07-18 15:47  ls
+ 6210  2025-07-18 15:47  cd code/neo_bank/dbt/dbt_emma
+ 6211  2025-07-18 15:47  poetry run dbt debug\n
+ 6212  2025-07-18 15:52  poetry run dbt test\n
+ 6213  2025-07-18 15:54  dbt docs generate
+ 6214  2025-07-18 15:54  poetry run dbt docs generate
+ 6215  2025-07-18 15:55  dbt docs serve
+ 6216  2025-07-18 15:55  poetry run dbt docs serve
