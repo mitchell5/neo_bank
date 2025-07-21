@@ -1,0 +1,134 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: neobank_data_raw
+
+    tables:
+      - name: devices
+        identifier: raw_devices
+        description: device type of user, one row per user_id
+        columns:
+          - name: device_type
+            description: type of device (apple, android, or other)
+            data_tests:
+              - not_null
+          - name: user_id
+            description: user identifier - primary key here and foreign key to transactions, users, and notifications table
+            data_tests:
+            - unique
+            - not_null
+
+
+      - name: notifications
+        identifier: raw_notifications
+        description: notifications sent to users. One row per notification sent.
+        columns:
+          - name: reason
+            description: description of notification sent
+            data_tests:
+              - unique
+              - not_null
+          - name: channel
+            description: how notification was sent - via SMS, push, or email
+            data_tests:
+              - not_null
+          - name: status
+            description: status of notification sent - SENT or FAILED
+            data_tests:
+              - not_null
+          - name: user_id
+            description: foreign key to users and transactions and devices table
+            data_tests:
+              - not_null
+          - name: created_date
+            description: date of notification status
+            data_tests:
+              - not_null
+
+      - name: transactions
+        identifier: raw_transactions
+        description: user transactions, 1 row per transaction_id
+        columns:
+          - name: transaction_id
+            description: transaction identifier - primary key
+            data_tests:
+              - not_null
+              - unique
+          - name: transactions_type
+            description: type of user transaction, 10 in total, examples such as refund or topup
+            data_tests:
+              - not_null
+          - name: transactions_currency
+            description: monetary currency of user transaction, 35 in total
+            data_tests:
+              - not_null
+          - name: amount_usd
+            description: amount of each user transaction in USD currency
+            data_tests:
+              - not_null
+          - name: transactions_state
+            description: state of each user transaction, 6 in total, examples such as failed or completed
+            data_tests:
+              - not_null
+          - name: ea_cardholderpresence
+            description: whether the card owner made a purchase in person (TRUE) or online (FALSE), also have unknown and null values
+            data_tests:
+              - not_null
+          - name: ea_merchant_country
+            description: 3 letter country code of merchant where transaction was made, has null values also
+            data_tests:
+              - not_null
+          - name: direction
+            description: whether money is entering user's account (INBOUND) or leaving it (OUTBOUND)
+            data_tests:
+              - not_null
+          - name: user_id
+            description: foreign key to devices, users, and notifications table
+          - name: created_date
+            description: timestamp of transaction
+            data_tests:
+              - not_null
+
+
+      - name: users
+        identifier: raw_users
+        description: information on users, one row per user_id
+        columns:
+          - name: user_id
+            description: primary key
+            data_tests:
+              - not_null
+              - unique
+          - name: birth_year
+            description: 4 digit birth year of user
+            data_tests:
+              - not_null
+          - name: country
+            description: 2 digit country code of user
+            data_tests:
+              - not_null
+          - name: created_date
+            description: creation date of user account
+            data_tests:
+              - not_null
+          - name: user_settings_crypto_unlocked
+            description: whether account has crypto acces, 0 or 1
+            data_tests:
+              - not_null
+          - name: plan
+            description: plan type of user, 6 in total, free and paid options
+            data_tests:
+              - not_null
+          - name: attributes_notifications_marketing_push
+            description: whether user has allows marketing push notifications, 0 or 1 but also has nulls
+            data_tests:
+              - not_null
+          - name: attributes_notifications_marketing_email
+            description: whether user has allows marketing emails, 0 or 1 but also has nulls
+            data_tests:
+              - not_null
+          - name: num_contacts
+            description: number of contacts a user has added to their account, can be 0
+            data_tests:
+              - not_null

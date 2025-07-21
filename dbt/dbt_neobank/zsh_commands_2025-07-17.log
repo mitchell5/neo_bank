@@ -1,0 +1,213 @@
+  477  2025-07-17 00:03  git branch
+  478  2025-07-17 00:04  git push origin feature_lina/poetry-restructure
+  479  2025-07-17 00:10  git checkout -b feature_lina/dbt-staging-tables
+  480  2025-07-17 00:11  tree
+  481  2025-07-17 00:18  git checkout feature_lina/poetry-restructure
+  482  2025-07-17 00:18  git status
+  483  2025-07-17 00:18  git add notebooks/part_1_data_exploration/exploration.ipynb
+  484  2025-07-17 00:19  git commit -m "Update exploration notebook"
+  485  2025-07-17 00:19  git push origin feature_lina/poetry-restructure
+  486  2025-07-17 00:20  git checkout -b feature_lina/dbt-staging-tables
+  487  2025-07-17 00:21  git checkout feature_lina/poetry-restructure
+  488  2025-07-17 00:21  git checkout  feature_lina/dbt-staging-tables
+  489  2025-07-17 00:21  clear
+  490  2025-07-17 00:24  cd dbt
+  491  2025-07-17 00:27  dbt init neo_bank_dbt
+  492  2025-07-17 00:27  poetry add dbt-bigquery
+  493  2025-07-17 00:28  poetry shell
+  494  2025-07-17 00:29  dbt --version
+  495  2025-07-17 00:30  cd dbt\ndbt init neo_bank_dbt
+  496  2025-07-17 00:53  cat ~/.dbt/profiles.yml
+  497  2025-07-17 00:54  git add .
+  498  2025-07-17 00:54  gti commit -m " init dbt with bq"
+  499  2025-07-17 00:54  git commit -m " initialize dbt with bq"
+  500  2025-07-17 00:55  git push feature_lina/dbt-staging-tables
+  501  2025-07-17 00:55  git push origin feature_lina/dbt-staging-tables
+  502  2025-07-17 10:06  git checkout main\n
+  503  2025-07-17 10:07  git statsh
+  504  2025-07-17 10:07  git stash
+  505  2025-07-17 10:07  git checkout main\n
+  506  2025-07-17 10:07  git pull origin main\n
+  507  2025-07-17 10:08  git checkout -b upload-notifications-to-gcp
+  508  2025-07-17 10:10  cd data
+  509  2025-07-17 10:10  cd ..
+  510  2025-07-17 10:10  cd part_1-data_exploration
+  511  2025-07-17 10:10  code .
+  512  2025-07-17 10:17  poetry add pyarrow\n
+  513  2025-07-17 10:18  poetry update package
+  514  2025-07-17 10:21  poetry run pip install pyarrow\n
+  515  2025-07-17 10:25  poetry shell
+  516  2025-07-17 10:26  poetry env activate\n
+  517  2025-07-17 10:28  pip install ipykernel
+  518  2025-07-17 10:28  python -m ipykernel install --user --name=02-upload --display-name "Python (02-upload)"
+  519  2025-07-17 10:31  poetry env info\n
+  520  2025-07-17 10:32  poetry env activate\n
+  521  2025-07-17 10:33  jupyter kernelspec list\n
+  522  2025-07-17 10:34  source /home/neobanking2025/projects/neo_bank/part_1-data_exploration/.venv/bin/activate
+  523  2025-07-17 10:35  pip install ipykernel   # just in case it's not installed yet
+  524  2025-07-17 10:35  python -m ipykernel install --user --name=part_1-data_exploration --display-name "Python (part_1-data_exploration)"
+  525  2025-07-17 10:35  jupyter kernelspec list\n
+  526  2025-07-17 10:40  poetry run jupyter notebook\n
+  527  2025-07-17 10:41  pkill -f jupyter\n
+  528  2025-07-17 10:42  deactivate\n
+  529  2025-07-17 11:10  gcloud auth list\n
+  530  2025-07-17 11:11  gcloud config set account 'data-uploader@sacred-choir-466017-s9.iam.gserviceaccount.com'
+  531  2025-07-17 11:11  gcloud auth list\n
+  532  2025-07-17 11:13  echo $GOOGLE_APPLICATION_CREDENTIALS
+  533  2025-07-17 11:14  direnv reload
+  534  2025-07-17 11:15  poetry add python-dotenv\n
+  535  2025-07-17 11:20  poetry show python-dotenv\n
+  536  2025-07-17 11:20  poetry run python -c "from dotenv import load_dotenv; print('✅ python-dotenv loaded')"\n
+  537  2025-07-17 11:26  export GOOGLE_APPLICATION_CREDENTIALS=/home/neobanking2025/projects/neo_bank/part_1-data_exploration/sacred-choir-466017-s9-c7fdbf18a028.json\n
+  538  2025-07-17 11:26  echo $GOOGLE_APPLICATION_CREDENTIALS
+  539  2025-07-17 12:20  git branch
+  540  2025-07-17 12:21  git checkout feature_lina/dbt-staging-tables
+  541  2025-07-17 12:46  cd part_1-data_exploration
+  542  2025-07-17 12:47  code . 
+  543  2025-07-17 12:52  export GOOGLE_APPLICATION_CREDENTIALS='/home/neobanking2025/projects/neo_bank/part_1-data_exploration/sacred-choir-466017-s9-c7fdbf18a028.json'
+  544  2025-07-17 12:52  echo $GOOGLE_APPLICATION_CREDENTIALS
+  545  2025-07-17 12:54  git stash\ngit checkout feature_lina/dbt-staging-tables
+  546  2025-07-17 13:00  git log --oneline --decorate --graph --all
+  547  2025-07-17 13:01  git status
+  548  2025-07-17 13:02  cd ..
+  549  2025-07-17 13:02  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  550  2025-07-17 13:04  cat ~/.zshrc
+  551  2025-07-17 13:04  vimo ~/.zshrc
+  552  2025-07-17 13:05  nano  ~/.zshrc
+  553  2025-07-17 13:05  source ~/.zshrc\n
+  554  2025-07-17 13:05  cat ~/.zshrc
+  555  2025-07-17 13:06  git stash push -m "Emma's untracked files"
+  556  2025-07-17 13:06  git status
+  557  2025-07-17 13:06  cat ~/.zshrc
+  558  2025-07-17 13:07  git add . 
+  559  2025-07-17 13:07  git status
+  560  2025-07-17 13:07  git reset
+  561  2025-07-17 13:07  git status
+  562  2025-07-17 13:08  git add exploration.ipynb
+  563  2025-07-17 13:09  git commit -m "all 4 files are in gcp storage"
+  564  2025-07-17 13:09  git checkout main
+  565  2025-07-17 13:09  git pull origin main
+  566  2025-07-17 13:11  git stash push -m "Emma's untracked exploration work" --include-untracked
+  567  2025-07-17 13:11  git stash list
+  568  2025-07-17 13:11  git status
+  569  2025-07-17 13:12  git stash\ngit checkout feature_lina/dbt-staging-tables
+  570  2025-07-17 13:13  git status
+  571  2025-07-17 13:13  git stash push -m "Emma's gx folder" --include-untracked
+  572  2025-07-17 13:14  git status
+  573  2025-07-17 13:14  git merge ls -al
+  574  2025-07-17 13:14  ls -al
+  575  2025-07-17 13:15  ls -a
+  576  2025-07-17 13:16  git branch --show-current\n
+  577  2025-07-17 13:17  git checkout upload-notifications-to-gcp\n
+  578  2025-07-17 13:17  git status
+  579  2025-07-17 13:21  git add exploration.ipynb
+  580  2025-07-17 13:21  git status
+  581  2025-07-17 13:22  git ls-files | grep exploration.ipynb\n
+  582  2025-07-17 13:22  ls dbt/
+  583  2025-07-17 13:22  git checkout feature_lina/dbt-staging-tables
+  584  2025-07-17 13:23  git status
+  585  2025-07-17 13:23  git add exploration.ipynb
+  586  2025-07-17 13:23  git status
+  587  2025-07-17 13:23  git branch
+  588  2025-07-17 13:24  git status
+  589  2025-07-17 13:25  git log main..feature_lina/dbt-staging-tables --oneline\n
+  590  2025-07-17 13:25  git log main..upload-notifications-to-gcp --oneline    
+  591  2025-07-17 13:26  ls dbt/
+  592  2025-07-17 13:28  git checkout upload-notifications-to-gcp
+  593  2025-07-17 13:28  git checkout main
+  594  2025-07-17 13:28  git checkout upload-notifications-to-gcp
+  595  2025-07-17 13:28  git cherry-pick 22f55e3
+  596  2025-07-17 13:29  git cherry-pick 22f55e3 94f17a8
+  597  2025-07-17 13:32  git checkout upload-notifications-to-gcp
+  598  2025-07-17 13:32  git cherry-pick --abort\n
+  599  2025-07-17 13:34  git log -- exploration.ipynb\n
+  600  2025-07-17 13:35  git checkout feature_lina/dbt-staging-tables\nls exploration.ipynb\n
+  601  2025-07-17 13:36  git status
+  602  2025-07-17 13:39  git branch -d upload-notifications-to-gcp
+  603  2025-07-17 13:39  git status
+  604  2025-07-17 13:39  git log main..feature_lina/dbt-staging-tables --oneline\n
+  605  2025-07-17 13:40  git branch
+  606  2025-07-17 13:40  git checkout feature_lina/dbt-staging-tables
+  607  2025-07-17 13:40  git reset --hard 9af6d62
+  608  2025-07-17 13:40  git log main..feature_lina/dbt-staging-tables --oneline\n
+  609  2025-07-17 13:41  git show 94f17a8\n
+  610  2025-07-17 13:42  git show --stat 94f17a8
+  611  2025-07-17 13:43  git show --stat 9af6d62
+  612  2025-07-17 13:43  poetry shell
+  613  2025-07-17 13:44  poetry run python scripts/load_users_to_bq.py
+  614  2025-07-17 13:45  git checkout main
+  615  2025-07-17 13:45  cd ..
+  616  2025-07-17 13:45  code . 
+  617  2025-07-17 13:45  git status
+  618  2025-07-17 13:46  poetry run python scripts/load_users_to_bq.py
+  619  2025-07-17 13:47  git add . 
+  620  2025-07-17 13:47  git status
+  621  2025-07-17 13:48  git commit -m "new project structure and updated data exploration file"
+  622  2025-07-17 13:48  git push
+  623  2025-07-17 13:49  git checkout feature_lina/dbt-staging-tables
+  624  2025-07-17 13:50  poetry run python scripts/load_users_to_bq.py
+  625  2025-07-17 13:50  git fetch origin
+  626  2025-07-17 13:50  git diff main origin/main
+  627  2025-07-17 13:50  pwd
+  628  2025-07-17 13:51  ls scripts
+  629  2025-07-17 13:51  poetry run python scripts/load_users_to_bq.py
+  630  2025-07-17 13:52  git add scripts/load_users_to_bq.py
+  631  2025-07-17 13:52  git commit -m "Add load_users_to_bq script for uploading users table to BigQuery"
+  632  2025-07-17 13:52  git push origin feature_lina/dbt-staging-tables
+  633  2025-07-17 13:54  git checkout main
+  634  2025-07-17 13:54  ls scripts/load_users_to_bq.py
+  635  2025-07-17 14:04  git fetch origin\ngit pull origin main\n
+  636  2025-07-17 14:05  git status
+  637  2025-07-17 14:05  git push
+  638  2025-07-17 14:07  git status
+  639  2025-07-17 14:08  git add . 
+  640  2025-07-17 14:08  git status
+  641  2025-07-17 14:22  cd dbt
+  642  2025-07-17 14:23  git checkout -b emma/creating-general-dbt-structure
+  643  2025-07-17 14:23  code . 
+  644  2025-07-17 14:23  poetry init
+  645  2025-07-17 14:24  poetry add dbt-bigquery
+  646  2025-07-17 14:24  dbt --version
+  647  2025-07-17 14:25  poetry install
+  648  2025-07-17 14:26  touch README.md\n
+  649  2025-07-17 14:26  poetry install
+  650  2025-07-17 14:28  cd ..
+  651  2025-07-17 14:28  poetry install
+  652  2025-07-17 14:29  cd dbt
+  653  2025-07-17 14:29  code . 
+  654  2025-07-17 14:29  poetry install
+  655  2025-07-17 14:33  poetry install\n
+  656  2025-07-17 14:34  poetry install --no-root\n
+  657  2025-07-17 14:34  dbt --version
+  658  2025-07-17 14:35  poetry run dbt --version\n
+  659  2025-07-17 14:36  poetry run dbt init
+  660  2025-07-17 14:40  cd dbt_emma
+  661  2025-07-17 14:40  code . 
+  662* 2025-07-17 14:42  mkdir models/source;\nmkdir models/staging;\nmkdir models/intermediate;
+  663* 2025-07-17 14:43  cd ..
+  664* 2025-07-17 14:43  ls
+  665* 2025-07-17 14:43  cd part_1-data_exploration
+  666* 2025-07-17 14:44  code . 
+  667  2025-07-17 14:51  ls
+  668  2025-07-17 14:51  touch models/source/sources.yml
+  669  2025-07-17 14:53  git add . 
+  670  2025-07-17 14:53  git status
+  671  2025-07-17 14:54  git add /home/neobanking2025/projects/neo_bank/part_1-data_exploration/exploration.ipynb
+  672  2025-07-17 14:54  git status
+  673  2025-07-17 14:55  git commit -m "renamed gcp tables from stg to raw and also started dbt part"
+  674  2025-07-17 14:55  git push
+  675  2025-07-17 14:56  git checkout main
+  676  2025-07-17 14:56  git pull origin main
+  677  2025-07-17 14:56  git merge emma/creating-general-dbt-structure\n
+  678  2025-07-17 14:56  git push origin main\n
+  679  2025-07-17 14:58  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  680  2025-07-17 15:04  nano ~/.zshrc
+  681  2025-07-17 15:04  echo $git
+  682  2025-07-17 15:04  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  683  2025-07-17 15:05  source ~/.zshrc\n
+  684  2025-07-17 15:05  echo $git
+  685  2025-07-17 15:06  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+  686  2025-07-17 15:06  history
+  687  2025-07-17 15:09  nano ~/.zshrc
+  688  2025-07-17 15:10  source ~/.zshrc\n
+  689  2025-07-17 15:10  history

@@ -1,0 +1,105 @@
+ 6178  2025-07-18 14:29  git checkout -b dbt-sources-step
+ 6179  2025-07-18 14:29  git fetch origin\n
+ 6180  2025-07-18 15:20  poetry run dbt test
+ 6181  2025-07-18 15:20  cd dbt_emma
+ 6182  2025-07-18 15:20  code . 
+ 6183  2025-07-18 15:21  poetry run dbt test
+ 6184  2025-07-18 15:21  cd ..
+ 6185  2025-07-18 15:21  ls
+ 6186  2025-07-18 15:21  cd dbt
+ 6187  2025-07-18 15:21  ls
+ 6188  2025-07-18 15:21  ls -al
+ 6189  2025-07-18 15:21  cd dbt_emma
+ 6190  2025-07-18 15:21  ls
+ 6191  2025-07-18 15:21  ls -al
+ 6192  2025-07-18 15:22  poetry init
+ 6193  2025-07-18 15:23  poetry add dbt-bigquery
+ 6194  2025-07-18 15:24  poetry dbt test
+ 6195  2025-07-18 15:24  poetry run dbt --version\n
+ 6196  2025-07-18 15:25  poetry run dbt test
+ 6197  2025-07-18 15:27  cat ~/.dbt/profiles.yml
+ 6198  2025-07-18 15:27  nano ~/.dbt/profiles.yml
+ 6199  2025-07-18 15:32  cat ~/.dbt/profiles.yml
+ 6200  2025-07-18 15:32  poetry run dbt debug\n
+ 6201  2025-07-18 15:37  cd /home/eberniczky/.gcp_keys
+ 6202  2025-07-18 15:37  ls -al
+ 6203  2025-07-18 15:45  code . 
+ 6204  2025-07-18 15:45  ls -al
+ 6205  2025-07-18 15:46  cat ~/.dbt/profiles.yml
+ 6206  2025-07-18 15:46  nano  ~/.dbt/profiles.yml
+ 6207  2025-07-18 15:47  cat ~/.dbt/profiles.yml
+ 6208  2025-07-18 15:47  cd ~
+ 6209  2025-07-18 15:47  ls
+ 6210  2025-07-18 15:47  cd code/neo_bank/dbt/dbt_emma
+ 6211  2025-07-18 15:47  poetry run dbt debug\n
+ 6212  2025-07-18 15:52  poetry run dbt test\n
+ 6213  2025-07-18 15:54  dbt docs generate
+ 6214  2025-07-18 15:54  poetry run dbt docs generate
+ 6215  2025-07-18 15:55  dbt docs serve
+ 6216  2025-07-18 15:55  poetry run dbt docs serve
+ 6217  2025-07-18 15:58  history | grep "$(date +'%Y-%m-%d')" > zsh_commands_$(date +'%Y-%m-%d').log
+ 6218  2025-07-18 15:58  git status
+ 6219  2025-07-18 16:00  git add . 
+ 6220  2025-07-18 16:00  git status
+ 6221  2025-07-18 16:00  git commit -m "defined source tables"
+ 6222  2025-07-18 16:00  git checkout main\n
+ 6223  2025-07-18 16:01  git pull origin main\n
+ 6224  2025-07-18 16:01  git merge dbt-sources-step\n
+ 6225  2025-07-18 16:01  git push origin main\n
+ 6226  2025-07-18 16:04  git checkout -b emma-stging-tables
+ 6227  2025-07-18 16:05  mkdir models/staging
+ 6228  2025-07-18 16:06  cd models/staging
+ 6229  2025-07-18 16:07  touch stg_devices.sql
+ 6230  2025-07-18 16:07  touch stg_notifications.sql
+ 6231  2025-07-18 16:07  touch stg_transactions.sql
+ 6232  2025-07-18 16:07  touch stg_users.sql
+ 6233  2025-07-18 16:08  touch staging.yml
+ 6234  2025-07-18 16:17  cd ..
+ 6235  2025-07-18 16:18  cd staging
+ 6236  2025-07-18 16:18  cd ..
+ 6237  2025-07-18 16:19  touch tests/assert_integer_type.sql
+ 6238  2025-07-18 16:20  cd models/staging
+ 6239  2025-07-18 16:21  poetry run dbt run --models staging\n
+ 6240  2025-07-18 16:23  poetry run dbt run --m stg_devices
+ 6241  2025-07-18 16:24  poetry run dbt run -m stg_devices
+ 6242  2025-07-18 16:34  poetry run dbt run -s stg_devices
+ 6243  2025-07-18 16:39  cat ~/.dbt/profiles.yml
+ 6244  2025-07-18 16:41  nano  ~/.dbt/profiles.yml
+ 6245  2025-07-18 16:41  poetry run dbt run -s stg_devices
+ 6246  2025-07-18 16:43  nano  ~/.dbt/profiles.yml
+ 6247  2025-07-18 16:43  poetry run dbt run -s stg_devices
+ 6248  2025-07-18 16:49  nano  ~/.dbt/profiles.yml
+ 6249  2025-07-18 16:54  poetry run dbt run -s stg_devices
+ 6250  2025-07-18 17:01  cd ..
+ 6251  2025-07-18 17:01  code . 
+ 6252  2025-07-18 17:01  cd dbt_emma
+ 6253  2025-07-18 17:02  touch packages.yml
+ 6254  2025-07-18 17:02  poetry run dbt deps
+ 6255  2025-07-18 17:03  cd models
+ 6256  2025-07-18 17:03  cd staging
+ 6257  2025-07-18 17:12  poetry run dbt run -s stg_notifications
+ 6258  2025-07-18 17:26  poetry run dbt run -s stg_transactions.sql
+ 6259  2025-07-18 17:33  poetry run dbt run -s stg_users.sql
+ 6260  2025-07-18 17:40  poetry run dbt test
+ 6261  2025-07-18 17:41  dbt test --select stg_devices.sql
+ 6262  2025-07-18 17:49  poetry run dbt test --select stg_devices.sql
+ 6263  2025-07-18 17:50  poetry run dbt deps\n
+ 6264  2025-07-18 17:54  poetry run dbt test --select stg_devices.sql
+ 6265  2025-07-18 17:55  poetry run dbt clean\npoetry run dbt deps\n
+ 6266  2025-07-18 17:56  poetry run dbt clean\n
+ 6267  2025-07-18 17:56  poetry run dbt deps\n
+ 6268  2025-07-18 17:56  poetry run dbt test --select stg_devices.sql
+ 6269  2025-07-18 17:58  cd ..
+ 6270  2025-07-18 17:58  cd dbt_emma
+ 6271  2025-07-18 18:00  poetry update
+ 6272  2025-07-18 18:01  poetry run dbt test --select stg_devices.sql
+ 6273  2025-07-18 18:01  poetry run dbt --version
+ 6274  2025-07-18 18:04  dbt deps
+ 6275  2025-07-18 18:04  poetry run dbt deps
+ 6276  2025-07-18 18:12  poetry run dbt test --select stg_devices.sql
+ 6277  2025-07-18 18:23  poetry run dbt build --select stg_devices.sql
+ 6278  2025-07-18 18:25  poetry run dbt build --select stg_notifications
+ 6279  2025-07-18 18:27  poetry run dbt build --select stg_devices.sql
+ 6280  2025-07-18 18:27  poetry run dbt build --select stg_notifications
+ 6281  2025-07-18 18:29  poetry run dbt build --select stg_transactions
+ 6282  2025-07-18 18:35  poetry run dbt build --select stg_users
