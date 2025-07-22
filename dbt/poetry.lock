@@ -277,6 +277,20 @@ pandas = ">=1.5.3"
 pyarrow = ">=13.0.0"
 
 [[package]]
+name = "dbt"
+version = "1.0.0.40.5"
+description = "The dbt Cloud CLI - an ELT tool for running SQL transformations and data models in dbt Cloud. For more documentation on these commands, visit: docs.getdbt.com"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "dbt-1.0.0.40.5.tar.gz", hash = "sha256:d397bfbe4b1d0b3be7f7753f2323cc7d5d1e3a75b51aa0839e6cf72761319e94"},
+]
+
+[package.dependencies]
+setuptools = ">=61.2"
+
+[[package]]
 name = "dbt-adapters"
 version = "1.16.2"
 description = "The set of adapter protocols and base functionality that supports integration with dbt-core"
@@ -2637,4 +2651,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "7da3133d31337b7efd58ec4252a712f36ff9ffce00a0d276aa027fd6c17cb0ee"
+content-hash = "83f900edebced5f1d9692e1038dbeebf6994a9458f5077d31cb8959fad90e76b"

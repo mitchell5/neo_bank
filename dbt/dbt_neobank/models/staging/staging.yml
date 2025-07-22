@@ -38,6 +38,10 @@ models:
         description: date of notification status
         data_tests:
           - not_null
+      - name: notification_id
+        description: composite key needed for data vault model
+        data_tests:
+          - not_null
 
 
 

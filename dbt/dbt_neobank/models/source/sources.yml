@@ -27,7 +27,6 @@ sources:
           - name: reason
             description: description of notification sent
             data_tests:
-              - unique
               - not_null
           - name: channel
             description: how notification was sent - via SMS, push, or email
@@ -122,12 +121,8 @@ sources:
               - not_null
           - name: attributes_notifications_marketing_push
             description: whether user has allows marketing push notifications, 0 or 1 but also has nulls
-            data_tests:
-              - not_null
           - name: attributes_notifications_marketing_email
             description: whether user has allows marketing emails, 0 or 1 but also has nulls
-            data_tests:
-              - not_null
           - name: num_contacts
             description: number of contacts a user has added to their account, can be 0
             data_tests:
