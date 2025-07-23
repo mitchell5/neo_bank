@@ -2,127 +2,131 @@ version: 2
 
 models:
   - name: stg_devices
-    description: device type of user, one row per user_id
+    description: "{{ doc('__devices') }}"
     columns:
         - name: device_type
-          description: type of device (apple, android, or other)
+          description: "{{ doc('__device_type') }}"
           data_tests:
             - not_null
         - name: user_id
-          description: user identifier - primary key here and foreign key to transactions, users, and notifications table
+          description: "{{ doc('__user_id') }}"
+          data_tests:
+          - unique
+          - not_null
+        - name: device_id
+          description: "{{ doc('__device_id') }}"
           data_tests:
           - unique
           - not_null
 
-
   - name: stg_notifications
-    description: notifications sent to users. One row per notification sent.
+    description: "{{ doc('__notifications') }}"
     columns:
       - name: reason
-        description: description of notification sent
+        description: "{{ doc('__reason') }}"
         data_tests:
           - not_null
       - name: channel
-        description: how notification was sent - via SMS, push, or email
+        description: "{{ doc('__channel') }}"
         data_tests:
           - not_null
       - name: status
-        description: status of notification sent - SENT or FAILED
+        description: "{{ doc('__status') }}"
         data_tests:
           - not_null
       - name: user_id
-        description: foreign key to users and transactions and devices table
+        description: "{{ doc('__user_id') }}"
         data_tests:
           - not_null
       - name: created_at
-        description: date of notification status
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
       - name: notification_id
-        description: composite key needed for data vault model
+        description: "{{ doc('__notification_id') }}"
         data_tests:
           - not_null
 
 
 
   - name: stg_transactions
-    description: user transactions, 1 row per transaction_id
+    description: "{{ doc('__transactions') }}"
     columns:
       - name: transaction_id
-        description: transaction identifier - primary key
+        description: "{{ doc('__transaction_id') }}"
         data_tests:
           - not_null
           - unique
       - name: transaction_type
-        description: type of user transaction, 10 in total, examples such as refund or topup
+        description:  "{{ doc('__transaction_type') }}"
         data_tests:
           - not_null
       - name: transaction_currency
-        description: monetary currency of user transaction, 35 in total
+        description: "{{ doc('__transaction_currency') }}"
         data_tests:
           - not_null
       - name: amount_usd
-        description: amount of each user transaction in USD currency
+        description: "{{ doc('__amount_usd') }}"
         data_tests:
           - not_null
       - name: transaction_state
-        description: state of each user transaction, 6 in total, examples such as failed or completed
+        description: "{{ doc('__transaction_state') }}"
         data_tests:
           - not_null
       - name: ea_cardholderpresence
-        description: whether the card owner made a purchase in person (TRUE) or online (FALSE), also have unknown and null values
+        description: "{{ doc('__ea_cardholderpresence') }}"
         data_tests:
           - not_null
       - name: ea_merchant_country
-        description: 3 letter country code of merchant where transaction was made, has null values also
+        description: "{{ doc('__ea_merchant_country') }}"
         data_tests:
           - not_null
       - name: direction
-        description: whether money is entering user's account (INBOUND) or leaving it (OUTBOUND)
+        description:  "{{ doc('__direction') }}"
         data_tests:
           - not_null
       - name: user_id
-        description: foreign key to devices, users, and notifications table
+        description: "{{ doc('__user_id') }}"
         data_tests:
           - not_null
       - name: created_at
-        description: timestamp of transaction
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
 
   - name: stg_users
-    description: information on users, one row per user_id
+    description: "{{ doc('__users') }}"
     columns:
       - name: user_id
-        description: primary key
+        description: "{{ doc('__user_id') }}"
         data_tests:
           - not_null
           - unique
       - name: birth_year
-        description: 4 digit birth year of user
+        description: "{{ doc('__birth_year') }}"
         data_tests:
           - not_null
       - name: country
-        description: 2 digit country code of user
+        description: "{{ doc('__country') }}"
         data_tests:
           - not_null
       - name: created_at
-        description: creation date of user account
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
       - name: crypto_unlocked
-        description: whether account has crypto acces, 0 or 1
+        description: "{{ doc('__crypto_unlocked') }}"
         data_tests:
           - not_null
       - name: plan
-        description: plan type of user, 6 in total, free and paid options
+        description: "{{ doc('__plan') }}"
         data_tests:
           - not_null
       - name: marketing_push
-        description: whether user has allows marketing push notifications, 0 or 1 but also has nulls
+        description: "{{ doc('__marketing_push') }}"
       - name: marketing_email
-        description: whether user has allows marketing emails, 0 or 1 but also has nulls
+        description: "{{ doc('__marketing_email') }}"
       - name: num_contacts
-        description: number of contacts a user has added to their account, can be 0
+        description: "{{ doc('__num_contacts') }}"
         data_tests:
           - not_null

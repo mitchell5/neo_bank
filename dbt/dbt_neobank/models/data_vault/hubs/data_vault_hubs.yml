@@ -1,55 +1,67 @@
 models:
   - name: hub_notifications
-    description: Hub table for unique business key from stg_notifications
+    description: "{{ doc('__hub_notifications') }}"
     columns:
       - name: notification_id
+        description: "{{ doc('__notification_id') }}"
         data_tests:
           - unique
           - not_null
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - unique
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
 
   - name: hub_transactions
-    description: Hub table for unique business key from stg_transactions
+    description: "{{ doc('__hub_transactions') }}"
     columns:
       - name: transaction_id
+        description: "{{ doc('__transaction_id') }}"
         data_tests:
           - unique
           - not_null
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - unique
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: hub_users
-    description: Hub table for unique business key from stg_users
+    description: "{{ doc('__hub_users') }}"
     columns:
       - name: user_id
+        description: "{{ doc('__user_id') }}"
         data_tests:
           - unique
           - not_null
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - unique
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null

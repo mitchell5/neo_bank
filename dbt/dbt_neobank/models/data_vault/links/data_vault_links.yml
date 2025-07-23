@@ -1,40 +1,50 @@
 models:
   - name: link_user_transaction
-    description: link table connecting users and transactions
+    description: "{{ doc('__link_user_transaction') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
       - name: user_transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - unique
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: link_user_notification
-    description: link table connecting users and notifications
+    description: "{{ doc('__link_user_notification') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
       - name: user_notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - unique
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
