@@ -1,0 +1,51 @@
+ 6461  2025-07-23 09:17  cd dbt
+ 6462  2025-07-23 09:17  cd dbt_neobank
+ 6463  2025-07-23 09:18  cd models/data_vault/satellites
+ 6464  2025-07-23 09:22  touch sat_user_dob.sql
+ 6465  2025-07-23 10:06  poetry run dbt build -s sat_user_dob
+ 6466  2025-07-23 10:10  touch sat_user_country.sql
+ 6467  2025-07-23 10:11  poetry run dbt build -s sat_user_country
+ 6468  2025-07-23 10:12  git checkout -b emma/dv_satellites
+ 6469  2025-07-23 10:13  touch sat_user_creation.sql
+ 6470  2025-07-23 10:14  poetry run dbt build -s sat_user_creation
+ 6471  2025-07-23 10:16  touch sat_user_plan.sql
+ 6472  2025-07-23 10:17  poetry run dbt build -s sat_user_plan
+ 6473  2025-07-23 10:18  touch sat_user_crypto.sql
+ 6474  2025-07-23 10:19  poetry run dbt build -s sat_user_crypto
+ 6475  2025-07-23 10:23  touch sat_user_mktg_push.sql
+ 6476  2025-07-23 10:25  poetry run dbt build -s sat_user_mktg_push
+ 6477  2025-07-23 10:29  poetry run dbt build -s .\n
+ 6478  2025-07-23 10:30  poetry run dbt ls -s .\n
+ 6479  2025-07-23 10:31  poetry run dbt build -s data_vault.satellites\n
+ 6480  2025-07-23 10:32  poetry run dbt -s sat_user_creation
+ 6481  2025-07-23 10:33  poetry run dbt build  -s sat_user_country
+ 6482  2025-07-23 10:36  poetry run dbt build -s data_vault.satellites\n
+ 6483  2025-07-23 10:37  poetry run dbt build -s .
+ 6484  2025-07-23 10:38  touch sat_user_mktg_email.sql
+ 6485  2025-07-23 10:43  touch sat_user_contacts.sql
+ 6486  2025-07-23 10:45  poetry run dbt build -s data_vault.satellites\n
+ 6487  2025-07-23 10:47  touch sat_user_device.sql
+ 6488  2025-07-23 10:48  poetry run dbt build -s data_vault.satellites\n
+ 6489  2025-07-23 18:50  cd dbt
+ 6490  2025-07-23 18:50  cd dbt_neobank
+ 6491  2025-07-23 18:50  code . 
+ 6492  2025-07-23 18:51  cd macros
+ 6493  2025-07-23 18:52  touch transaction_satellite_template.sql
+ 6494  2025-07-23 18:55  cd ../models/data_vault/satellites
+ 6495  2025-07-23 18:55  touch sat_trans_type.sql
+ 6496  2025-07-23 19:03  poetry run dbt build -s data_vault.satellites\n
+ 6497  2025-07-23 19:04  touch sat_trans_currency.sql
+ 6498  2025-07-23 19:06  touch sat_trans_amount_usd.sql
+ 6499  2025-07-23 19:07  touch sat_trans_state.sql
+ 6500  2025-07-23 19:09  touch sat_trans_cardholder.sql
+ 6501  2025-07-23 19:11  touch sat_trans_country.sql
+ 6502  2025-07-23 19:12  touch sat_trans_direction.sql
+ 6503  2025-07-23 19:13  touch sat_trans_creation.sql
+ 6504  2025-07-23 19:14  poetry run dbt build -s data_vault.satellites\n
+ 6505  2025-07-23 19:20  touch sat_notif_reason.sql
+ 6506  2025-07-23 19:21  poetry run dbt build -s sat_notif_reason\n
+ 6507  2025-07-23 19:22  touch sat_notif_channel.sql
+ 6508  2025-07-23 19:23  touch sat_notif_status.sql
+ 6509  2025-07-23 19:24  touch sat_notif_creation.sql
+ 6510  2025-07-23 19:26  poetry run dbt build -s data_vault.satellites\n
+ 6511  2025-07-23 19:27  cd ..

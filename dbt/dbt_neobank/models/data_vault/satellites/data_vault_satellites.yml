@@ -1,0 +1,419 @@
+models:
+  - name: sat_user_dob
+    description: satellite table showing user birth year
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: birth_year
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_dob
+    description: satellite table showing user country
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: country
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+
+  - name: sat_user_creation
+    description: satellite table showing timestamp of user account creation
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: created_at
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+
+  - name: sat_user_plan
+    description: satellite table showing the plan the user is subscribed to
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: plan
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_crypto
+    description: satellite table showing whether user can transact with crypto or not
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: crypto_unlocked
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_mktg_push
+    description: satellite table showing whether user has enabled push notifications
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: marketing_push
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_mktg_email
+    description: satellite table showing whether user has enabled emails
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: marketing_email
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_contacts
+    description: satellite table showing number of contacts user added to account
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: num_contacts
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_user_device
+    description: satellite table showing device type of user
+    columns:
+      - name: user_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: device_type
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+
+  - name: sat_trans_type
+    description: satellite table for transaction type of user
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_type
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_currency
+    description: satellite table for local currency of user's transaction
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_currency
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_amount_usd
+    description: satellite table for value of user's transaction in USD
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: amount_usd
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_state
+    description: satellite table for status of user's transaction
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_state
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_cardholder
+    description: satellite table for cardholder presence during transaction - ie) in person or online
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: ea_cardholderpresence
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_country
+    description: satellite table for country of merchant of transaction
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: ea_merchant_country
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_direction
+    description: satellite table for direction of transaction, in or out
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: direction
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_trans_creation
+    description: satellite table for transaction date
+    columns:
+      - name: transaction_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: created_at
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_notif_reason
+    description: satellite table for reason of user notification
+    columns:
+      - name: notification_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: reason
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_notif_channel
+    description: satellite table for communcation channel of user notification
+    columns:
+      - name: notification_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: channel
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_notif_status
+    description: satellite table for delivery status of user notification
+    columns:
+      - name: notification_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: status
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null
+
+  - name: sat_notif_creation
+    description: satellite table for timestamp of user notification status
+    columns:
+      - name: notification_hk
+        data_tests:
+          - not_null
+          - unique
+      - name: created_at
+        data_tests:
+          - not_null
+      - name: load_date
+        data_tests:
+          - not_null
+      - name: load_end_date
+        data_tests:
+          - not_null
+      - name: record_source
+        data_tests:
+          - not_null

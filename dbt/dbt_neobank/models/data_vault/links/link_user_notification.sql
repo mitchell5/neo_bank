@@ -14,6 +14,6 @@ SELECT
   md5(concat(user_hk,notification_hk)) AS user_notification_hk
   ,user_hk
   ,notification_hk
-  ,timestamp('2025-07-01 00:00:00.000000 UTC') AS load_date
+  ,{{ load_date() }} AS load_date
   ,{{ record_source('stg_transactions') }} AS record_source
 FROM notifications_with_user
