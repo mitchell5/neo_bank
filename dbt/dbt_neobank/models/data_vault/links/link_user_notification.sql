@@ -15,5 +15,5 @@ SELECT
   ,user_hk
   ,notification_hk
   ,{{ load_date() }} AS load_date
-  ,{{ record_source('stg_transactions') }} AS record_source
+  ,{{ record_source('stg_notifications') }} AS record_source
 FROM notifications_with_user

@@ -145,6 +145,11 @@ link table connecting users and transactions
 link table connecting users and notifications
 {% enddocs %}
 
+{% docs __mart_user_notifications%}
+Data mart providing user-level notification history, enriched with channel,
+reason and status per load. One row per user per notification.
+{% enddocs %}
+
 {% docs __sat_user_dob%}
 satellite table showing user birth year
 {% enddocs %}
