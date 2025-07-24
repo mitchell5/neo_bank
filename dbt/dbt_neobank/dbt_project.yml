@@ -36,6 +36,11 @@ models:
     staging:
       +schema: neobank_data_staging
       +materialized: view
+
     data_vault:
       +schema: neobank_data_vault
+      +materialized: view
+
+    mart:
+      +schema: neobank_data_marts
       +materialized: view

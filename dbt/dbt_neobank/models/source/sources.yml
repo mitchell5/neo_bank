@@ -16,8 +16,8 @@ sources:
           - name: user_id
             description: "{{ doc('__user_id') }}"
             data_tests:
-            - unique
-            - not_null
+              - unique
+              - not_null
 
 
       - name: notifications
