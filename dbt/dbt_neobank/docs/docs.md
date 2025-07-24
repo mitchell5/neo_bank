@@ -118,7 +118,11 @@ MD5 hash
 {% enddocs %}
 
 {% docs __load_date%}
-Load Date - given fixed as '2025-07-01 00:00:00.000000 UTC'
+Load Date
+{% enddocs %}
+
+{% docs __load_end_date%}
+Load End Date
 {% enddocs %}
 
 {% docs __record_source%}
@@ -139,4 +143,72 @@ link table connecting users and transactions
 
 {% docs __link_user_notification%}
 link table connecting users and notifications
+{% enddocs %}
+
+{% docs __sat_user_dob%}
+satellite table showing user birth year
+{% enddocs %}
+
+{% docs __sat_user_country%}
+satellite table showing user country
+{% enddocs %}
+
+{% docs __sat_user_creation%}
+satellite table showing timestamp of user account creation
+{% enddocs %}
+
+{% docs __sat_user_plan%}
+satellite table showing the plan the user is subscribed to
+{% enddocs %}
+
+{% docs __sat_user_crypto%}
+satellite table showing whether user can transact with crypto or not
+{% enddocs %}
+
+{% docs __sat_user_mktg_push%}
+satellite table showing whether user has enabled push notifications
+{% enddocs %}
+
+{% docs __sat_user_mktg_email%}
+satellite table showing whether user has enabled push notifications
+{% enddocs %}
+
+{% docs __sat_user_contacts%}
+satellite table showing number of contacts user added to account
+{% enddocs %}
+
+{% docs __sat_user_device%}
+satellite table showing device type of user
+{% enddocs %}
+
+{% docs __sat_trans_type%}
+satellite table for transaction type of user
+{% enddocs %}
+
+{% docs __sat_trans_currency%}
+satellite table for local currency of user's transaction
+{% enddocs %}
+
+{% docs __sat_trans_amount_usd%}
+satellite table for value of user's transaction in USD
+{% enddocs %}
+
+{% docs __sat_trans_state%}
+satellite table for status of user's transaction
+{% enddocs %}
+
+{% docs __sat_trans_cardholder%}
+satellite table for cardholder presence during transaction - ie) in person or online
+{% enddocs %}
+
+{% docs __sat_trans_country%}
+satellite table for country of merchant of transaction
+{% enddocs %}
+
+{% docs __sat_trans_direction%}
+satellite table for direction of transaction, in or out
+{% enddocs %}
+
+{% docs __sat_trans_creation%}
+satellite table for transaction date
 {% enddocs %}

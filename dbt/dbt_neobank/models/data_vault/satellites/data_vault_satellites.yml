@@ -1,340 +1,425 @@
 models:
   - name: sat_user_dob
-    description: satellite table showing user birth year
+    description: "{{ doc('__sat_user_dob') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: birth_year
+        description: "{{ doc('__birth_year') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_country
-    description: satellite table showing user country
+    description: "{{ doc('__sat_user_country') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: country
+        description: "{{ doc('__country') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
 
   - name: sat_user_creation
-    description: satellite table showing timestamp of user account creation
+    description: "{{ doc('__sat_user_creation') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: created_at
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
 
   - name: sat_user_plan
-    description: satellite table showing the plan the user is subscribed to
+    description: "{{ doc('__sat_user_plan') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: plan
+        description: "{{ doc('__plan') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_crypto
-    description: satellite table showing whether user can transact with crypto or not
+    description: "{{ doc('__sat_user_crypto') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: crypto_unlocked
+        description: "{{ doc('__crypto_unlocked') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_mktg_push
-    description: satellite table showing whether user has enabled push notifications
+    description: "{{ doc('__sat_user_mktg_push') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: marketing_push
+        description: "{{ doc('__marketing_push') }}"
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_mktg_email
-    description: satellite table showing whether user has enabled emails
+    description: "{{ doc('__sat_user_mktg_email') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: marketing_email
+        description: "{{ doc('__marketing_email') }}"
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_contacts
-    description: satellite table showing number of contacts user added to account
+    description:  "{{ doc('__sat_user_contacts') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: num_contacts
+        description: "{{ doc('__num_contacts') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_user_device
-    description: satellite table showing device type of user
+    description: "{{ doc('__sat_user_device') }}"
     columns:
       - name: user_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: device_type
+        description: "{{ doc('__device_type') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
 
   - name: sat_trans_type
-    description: satellite table for transaction type of user
+    description: "{{ doc('__sat_trans_type') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: transaction_type
+        description: "{{ doc('__transaction_type') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_currency
-    description: satellite table for local currency of user's transaction
+    description: "{{ doc('__sat_trans_currency') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: transaction_currency
+        description: "{{ doc('__transaction_currency') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_amount_usd
-    description: satellite table for value of user's transaction in USD
+    description: "{{ doc('__sat_trans_amount_usd') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: amount_usd
+        description: "{{ doc('__amount_usd') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_state
-    description: satellite table for status of user's transaction
+    description: "{{ doc('__sat_trans_state') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: transaction_state
+        description: "{{ doc('__transaction_state') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_cardholder
-    description: satellite table for cardholder presence during transaction - ie) in person or online
+    description: "{{ doc('__sat_trans_cardholder') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: ea_cardholderpresence
+        description: "{{ doc('__ea_cardholderpresence') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_country
-    description: satellite table for country of merchant of transaction
+    description: "{{ doc('__sat_trans_country') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: ea_merchant_country
+        description: "{{ doc('__ea_merchant_country') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_direction
-    description: satellite table for direction of transaction, in or out
+    description: "{{ doc('__sat_trans_direction') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: direction
+        description: "{{ doc('__direction') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
   - name: sat_trans_creation
-    description: satellite table for transaction date
+    description: "{{ doc('__sat_trans_creation') }}"
     columns:
       - name: transaction_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: created_at
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
@@ -342,19 +427,24 @@ models:
     description: satellite table for reason of user notification
     columns:
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: reason
+        description: "{{ doc('__reason') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
@@ -362,19 +452,24 @@ models:
     description: satellite table for communcation channel of user notification
     columns:
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: channel
+        description: "{{ doc('__channel') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
@@ -382,19 +477,24 @@ models:
     description: satellite table for delivery status of user notification
     columns:
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: status
+        description: "{{ doc('__status') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
 
@@ -402,18 +502,23 @@ models:
     description: satellite table for timestamp of user notification status
     columns:
       - name: notification_hk
+        description: "{{ doc('__hk') }}"
         data_tests:
           - not_null
           - unique
       - name: created_at
+        description: "{{ doc('__created_at') }}"
         data_tests:
           - not_null
       - name: load_date
+        description: "{{ doc('__load_date') }}"
         data_tests:
           - not_null
       - name: load_end_date
+        description: "{{ doc('__load_end_date') }}"
         data_tests:
           - not_null
       - name: record_source
+        description: "{{ doc('__record_source') }}"
         data_tests:
           - not_null
