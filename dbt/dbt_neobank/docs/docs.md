@@ -118,7 +118,11 @@ MD5 hash
 {% enddocs %}
 
 {% docs __load_date%}
-Load Date - given fixed as '2025-07-01 00:00:00.000000 UTC'
+Load Date
+{% enddocs %}
+
+{% docs __load_end_date%}
+Load End Date
 {% enddocs %}
 
 {% docs __record_source%}
@@ -139,4 +143,9 @@ link table connecting users and transactions
 
 {% docs __link_user_notification%}
 link table connecting users and notifications
+{% enddocs %}
+
+{% docs __mart_user_notifications%}
+Data mart providing user-level notification history, enriched with channel,
+reason and status per load. One row per user per notification.
 {% enddocs %}

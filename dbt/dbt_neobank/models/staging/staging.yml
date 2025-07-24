@@ -25,10 +25,16 @@ models:
         description: "{{ doc('__channel') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_channel_within_accepted_values
+              values: ['EMAIL', 'PUSH', 'SMS']
       - name: status
         description: "{{ doc('__status') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_status_within_accepted_values
+              values: ['SENT', 'FAILED']
       - name: user_id
         description: "{{ doc('__user_id') }}"
         data_tests:
