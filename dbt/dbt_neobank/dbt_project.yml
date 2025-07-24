@@ -39,3 +39,6 @@ models:
     data_vault:
       +schema: neobank_data_vault
       +materialized: view
+    marts:
+      +schema: neobank_data_marts
+      +materialized: table
