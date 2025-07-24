@@ -5,3 +5,6 @@
 # Environment variables and credentials
 .env
 *.json
+
+#Hidden Directories
+/**/.*/
