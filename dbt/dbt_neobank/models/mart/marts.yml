@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: mart_user_notifications
+    description: "{{ doc('__mart_user_notifications') }}"
+    columns:
+      - name: user_id
+        description: "{{ doc('__user_id') }}"
+        tests:
+          - not_null
+      - name: notification_id
+        description: "{{ doc('__notification_id') }}"
+        tests:
+          - not_null
+      - name: channel
+        description: "{{ doc('__channel') }}"
+        tests:
+          - not_null
+      - name: reason
+        description: "{{ doc('__reason') }}"
+        tests:
+          - not_null
+      - name: status
+        description: "{{ doc('__status') }}"
+        tests:
+          - not_null
+      - name: valid_from
+        description: "{{ doc('__load_date') }}"
+        tests:
+          - not_null
+      - name: valid_to
+        description: "{{ doc('__load_end_date') }}"
+        tests:
+          - not_null
+
+  - name: mart_transactions
+    description: a weekly view of the number of transactions per user
+    columns:
+        - name: transaction_week
+          description: week of transaction date, starting monday
+          data_tests:
+            - not_null
+        - name: user_id
+          description: "{{ doc('__user_id') }}"
+          data_tests:
+            - not_null
+        - name: transaction_state
+          description: "{{ doc('__transaction_state') }}"
+          data_tests:
+           - not_null
+        - name: transaction_type
+          description: "{{ doc('__transaction_type') }}"
+          data_tests:
+            - not_null
+        - name: physical_transactions
+          description: number of transactions where ea_cardholderpresence = 1
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
+        - name: online_transactions
+          description: number of transactions where ea_cardholderpresence = 0
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
+        - name: inbound_transactions
+          description: number of transactions where direction = inbound
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
+        - name: outbound_transactions
+          description: number of transactions where direction = outbound
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
+        - name: total_transactions
+          description: total number of transactions for that user for that week
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
+        - name: amount_usd
+          description: USD value of all transactions the user made that week
+          data_tests:
+            - dbt_utils.expression_is_true:
+                expression: '>= 0'
