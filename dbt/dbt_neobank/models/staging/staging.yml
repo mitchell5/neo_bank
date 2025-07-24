@@ -62,6 +62,9 @@ models:
         description:  "{{ doc('__transaction_type') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_transaction_type_within_accepted_values
+              values: ['REFUND', 'TOPUP', 'EXCHANGE', 'TRANSFER', 'CARD_PAYMENT', 'CARD_REFUND', 'ATM', 'FEE', 'CASHBACK', 'TAX']
       - name: transaction_currency
         description: "{{ doc('__transaction_currency') }}"
         data_tests:
@@ -74,6 +77,9 @@ models:
         description: "{{ doc('__transaction_state') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_transaction_state_within_accepted_values
+              values: ['COMPLETED', 'CANCELLED', 'DECLINED', 'PENDING', 'REVERTED', 'FAILED']
       - name: ea_cardholderpresence
         description: "{{ doc('__ea_cardholderpresence') }}"
         data_tests:
@@ -86,6 +92,9 @@ models:
         description:  "{{ doc('__direction') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_direction_within_accepted_values
+              values: ['INBOUND', 'OUTBOUND']
       - name: user_id
         description: "{{ doc('__user_id') }}"
         data_tests:
@@ -123,6 +132,9 @@ models:
         description: "{{ doc('__plan') }}"
         data_tests:
           - not_null
+          - accepted_values:
+              name: is_user_plan_within_accepted_values
+              values: ['STANDARD', 'PREMIUM', 'METAL', 'METAL_FREE', 'PREMIUM_OFFER', 'PREMIUM_FREE']
       - name: marketing_push
         description: "{{ doc('__marketing_push') }}"
       - name: marketing_email
