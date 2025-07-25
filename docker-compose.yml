@@ -1,0 +1,12 @@
+services:
+  streamlit:
+    build:
+      context: .
+    restart: always
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app
+      - /home/denizgokalp.5/.gcp_keys/le-wagon-de-bootcamp.json:/app/credentials.json
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
