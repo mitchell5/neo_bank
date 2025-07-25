@@ -82,3 +82,28 @@ models:
           data_tests:
             - dbt_utils.expression_is_true:
                 expression: '>= 0'
+
+  - name: mart_user_settings
+    description: >
+      This data mart aggregates user settings and profile data, including device type, country, plan, date of birth, contact count, marketing preferences, and whether crypto is unlocked. It represents the user profile at a point in time for analytics and segmentation purposes.
+    columns:
+      - name: user_hk
+        description: Surrogate key representing the unique user.
+      - name: device_type
+        description: The type of device most recently associated with the user.
+      - name: country
+        description: User's registered country.
+      - name: plan
+        description: Current plan assigned to the user (e.g. basic, premium).
+      - name: birth_year
+        description: Year of birth of the user.
+      - name: num_contacts
+        description: Number of contacts linked to the user account.
+      - name: crypto_unlocked
+        description: Boolean flag indicating if the user has unlocked crypto functionality.
+      - name: marketing_push_enabled
+        description: Whether the user has enabled push marketing notifications.
+      - name: marketing_email_enabled
+        description: Whether the user has enabled email marketing notifications.
+      - name: load_date
+        description: Timestamp of the most recent data load.
