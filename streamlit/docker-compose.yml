@@ -1,0 +1,11 @@
+services:
+  streamlit:
+    build:
+      context: .
+    restart: always
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./:/app

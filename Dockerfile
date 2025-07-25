@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
 # Set working directory
-WORKDIR /app
+WORKDIR /streamlit
 
 # Copy project files (adjust as needed)
 COPY ./pyproject.toml ./poetry.lock ./
@@ -27,7 +27,7 @@ RUN poetry install --no-interaction --no-ansi
 COPY ./app ./
 
 # Set env var for credentials (will be passed during runtime)
-ENV GOOGLE_APPLICATION_CREDENTIALS="/app/credentials.json"
+ENV GOOGLE_APPLICATION_CREDENTIALS
 
 # Expose port
 EXPOSE 8501

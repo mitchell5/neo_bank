@@ -1,0 +1,58 @@
+ 6667  2025-07-25 14:55  git pull origin main
+ 6668  2025-07-25 15:00  git checkout -b emma/transactions_mart
+ 6669  2025-07-25 15:00  git checkout -b emma/streamlit
+ 6670  2025-07-25 15:00  git checkout -b emma/streamlit_v2
+ 6671  2025-07-25 15:00  cd dbt/dbt_neobank
+ 6672  2025-07-25 15:01  direnv allow
+ 6673  2025-07-25 15:02  poetry run dbt build -s models/mart/mart_transactions
+ 6674  2025-07-25 15:04  cd ..
+ 6675  2025-07-25 15:04  poetry install
+ 6676  2025-07-25 15:05  cd dbt_neobank
+ 6677  2025-07-25 15:05  poetry run dbt build -s models/mart/mart_transactions
+ 6678  2025-07-25 15:06  poetry install
+ 6679  2025-07-25 15:07  poetry run dbt build -s models/mart/mart_transactions
+ 6680  2025-07-25 15:08  poetry run dbt ls\n
+ 6681  2025-07-25 15:09  poetry run dbt build -s mart_transactions
+ 6682  2025-07-25 15:11  source venv/bin/activate
+ 6683  2025-07-25 15:12  direnv reload 
+ 6684  2025-07-25 15:12  poetry install yamllint
+ 6685  2025-07-25 15:13  poetry add yamllint
+ 6686  2025-07-25 15:13  poetry run yamllint dbt_project.yml\n
+ 6687  2025-07-25 15:14  git status
+ 6688  2025-07-25 15:15  git add . 
+ 6689  2025-07-25 15:15  git status
+ 6690  2025-07-25 15:17  cd ..
+ 6691  2025-07-25 15:17  git add . 
+ 6692  2025-07-25 15:17  git status
+ 6693  2025-07-25 15:18  git commit -m "redid dbt file structure"
+ 6694  2025-07-25 15:24  cd streamlit
+ 6695  2025-07-25 15:26  touch .env
+ 6696  2025-07-25 15:31  code . 
+ 6697  2025-07-25 15:31  poetry install
+ 6698  2025-07-25 15:32  poetry install --no-root
+ 6699  2025-07-25 15:33  touch .envrc
+ 6700  2025-07-25 15:33  direnv allow
+ 6701  2025-07-25 15:33  touch Dockerfile
+ 6702  2025-07-25 15:33  direnv allow
+ 6703  2025-07-25 15:34  touch Dockerfile
+ 6704  2025-07-25 15:49  touch docker-compose.yml
+ 6705  2025-07-25 15:50  docker compose up --build\n
+ 6706  2025-07-25 16:03  tree
+ 6707  2025-07-25 16:05  docker compose up --build\n
+ 6708  2025-07-25 16:19  poetry install
+ 6709  2025-07-25 16:19  poetry lock
+ 6710  2025-07-25 16:19  poetry install
+ 6711  2025-07-25 16:19  docker compose up --build\n
+ 6712  2025-07-25 16:21  tree
+ 6713  2025-07-25 16:24  docker compose up --build\n
+ 6714  2025-07-25 16:29  touch app.py
+ 6715  2025-07-25 16:32  docker compose up --build\n
+ 6716  2025-07-25 16:50  poetry lock
+ 6717  2025-07-25 16:50  poetry install
+ 6718  2025-07-25 16:50  direnv allow
+ 6719  2025-07-25 16:51  rm -rf .venv\n
+ 6720  2025-07-25 16:51  sudo rm -rf .venv\n
+ 6721  2025-07-25 16:52  poetry install
+ 6722  2025-07-25 16:52  poetry lock
+ 6723  2025-07-25 16:52  poetry install
+ 6724  2025-07-25 16:52  docker compose up --build\n
