@@ -12,6 +12,7 @@ dependencies = [
     "dbt (>=1.0.0.40.5,<2.0.0.0.0)",
     "dbt-core (>=1.10.5,<2.0.0)",
     "streamlit (>=1.47.0,<2.0.0)",
+    "yamllint (>=1.37.1,<2.0.0)",
 ]
 
 [tool.poetry]
