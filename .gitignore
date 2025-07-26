@@ -5,6 +5,7 @@
 # Environment variables and credentials
 .env
 *.json
+.streamlit/secrets.toml
 
-#Hidden Directories
+# Hidden Directories
 /**/.*/

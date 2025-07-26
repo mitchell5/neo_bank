@@ -14,3 +14,35 @@ Runtime Error
 [0m20:44:14.583442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72bff776c3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72bff744fb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72bff739e2d0>]}
 [0m20:44:14.583923 [debug] [MainThread]: Flushing usage events
 [0m20:44:15.036897 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:54:14.034852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8195efbaa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8195ce96a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8195adbf20>]}
+
+
+============================== 09:54:14.041675 | 9778795a-1aba-43f0-8a23-12644759f7da ==============================
+[0m09:54:14.041675 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:54:14.042815 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:54:14.043730 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:54:14.045756 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.11881373, "process_in_blocks": "8", "process_kernel_time": 0.254847, "process_mem_max_rss": "99800", "process_out_blocks": "16", "process_user_time": 2.795878}
+[0m09:54:14.046736 [debug] [MainThread]: Command `dbt docs generate` failed at 09:54:14.046495 after 0.12 seconds
+[0m09:54:14.047824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b819531b380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8195efbaa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b819a387140>]}
+[0m09:54:14.048753 [debug] [MainThread]: Flushing usage events
+[0m09:54:14.420715 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:54:18.045876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea572e6e9f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea57444eea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea573565580>]}
+
+
+============================== 09:54:18.053929 | 3cecfcc0-1b08-459d-bd85-051b37593a00 ==============================
+[0m09:54:18.053929 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:54:18.055404 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/linam.palacios/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:54:18.056634 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/linam.palacios/code/Linchenpal/neo_bank/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:54:18.058314 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 0.13232872, "process_in_blocks": "0", "process_kernel_time": 0.25756, "process_mem_max_rss": "99412", "process_out_blocks": "0", "process_user_time": 2.948268}
+[0m09:54:18.059247 [debug] [MainThread]: Command `dbt docs serve` failed at 09:54:18.059057 after 0.13 seconds
+[0m09:54:18.059938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea5734da3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea57308f230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea572aab410>]}
+[0m09:54:18.060657 [debug] [MainThread]: Flushing usage events
+[0m09:54:18.428635 [debug] [MainThread]: An error was encountered while trying to flush usage events
