@@ -4,19 +4,13 @@ from google.oauth2 import service_account
 from google.cloud import bigquery
 import streamlit as st
 
-# Load credentials from Streamlit secrets
+# ---- Auth & BigQuery Setup ----
 credentials_info = st.secrets["GOOGLE_CREDENTIALS"]
 credentials = service_account.Credentials.from_service_account_info(credentials_info)
-
-# BigQuery client
 client = bigquery.Client(credentials=credentials, project=credentials.project_id)
-
 
 # Title
 st.title("Lina")
-
-# Initialize BigQuery client
-client = bigquery.Client()
 
 # Query to run
 query = """
