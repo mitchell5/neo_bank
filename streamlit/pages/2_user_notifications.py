@@ -16,7 +16,7 @@ client = bigquery.Client(credentials=credentials, project=credentials.project_id
 st.title("Deniz")
 
 # Initialize BigQuery client
-client = bigquery.Client()
+#client = bigquery.Client()
 
 # Query to run
 query = """
