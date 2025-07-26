@@ -1,3 +1,6 @@
 streamlit
-google-cloud-bigquery
-pandas
+pandas>=2.3.1,<3.0.0
+google-cloud-bigquery>=3.35.1,<4.0.0
+plotly
+matplotlib
+db-dtypes
