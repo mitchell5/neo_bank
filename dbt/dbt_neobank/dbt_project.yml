@@ -42,4 +42,4 @@ models:
 
     mart:
       +schema: neobank_data_marts
-      +materialized: view
+      +materialized: table
