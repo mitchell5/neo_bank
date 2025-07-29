@@ -1,0 +1,27 @@
+name: dbt CI
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  dbt-ci:
+    runs-on: ubuntu-latest
+    steps:
+      # First step (unnamed here) is to checkout the branch that triggered the event
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dbt
+        run: pip install dbt-core dbt-postgres  # or your adapter
+
+      - name: Run dbt checks
+        run: |
+          cd dbt_neobank
+          dbt deps
+          dbt build
