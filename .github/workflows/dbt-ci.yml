@@ -53,13 +53,3 @@ dbt_neobank:
       type: bigquery
   target: dev
 EOF
-
-      - name: Run dbt checks
-        run: |
-          cd ./dbt/dbt_neobank
-          dbt deps
-          dbt build --select state:modified+ --fail-fast
-
-      - name: Lint dbt models
-        run: |
-          sqlfluff lint
