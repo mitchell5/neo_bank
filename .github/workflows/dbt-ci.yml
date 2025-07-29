@@ -27,13 +27,6 @@ jobs:
           cd dbt/dbt_neobank
           poetry install
 
-      - name: Setup GCP service account key
-        run: |
-          echo "$GCP_KEY" > ~/gcp-key.json
-          chmod 600 ~/gcp-key.json
-        env:
-          GCP_KEY: ${{ secrets.GCP_KEY }}
-
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
