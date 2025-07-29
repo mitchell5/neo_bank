@@ -27,6 +27,9 @@ jobs:
           cd dbt/dbt_neobank
           poetry install
 
+      - name: Use secret
+        run: echo "My secret is ${{ secrets.GCP_KEY }}"
+
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
