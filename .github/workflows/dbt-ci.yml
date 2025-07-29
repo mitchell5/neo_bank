@@ -27,8 +27,32 @@ jobs:
           cd dbt/dbt_neobank
           poetry install
 
-      - name: Use secret
-        run: echo "My secret is ${{ secrets.GCP_KEY }}"
+      - name: Setup GCP service account key
+        run: |
+          echo "$GCP_KEY" > ~/gcp-key.json
+          chmod 600 ~/gcp-key.json
+        env:
+          GCP_KEY: ${{ secrets.GCP_KEY }}
+
+      - name: Setup dbt profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<EOF
+dbt_neobank:
+  outputs:
+    dev:
+      dataset: neobank_data_raw
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /home/runner/gcp-key.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: sacred-choir-466017-s9
+      threads: 2
+      type: bigquery
+  target: dev
+EOF
 
       - name: Run dbt checks
         run: |
