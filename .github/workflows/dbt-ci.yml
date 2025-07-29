@@ -27,9 +27,6 @@ jobs:
           cd dbt/dbt_neobank
           poetry install
 
-      - name: Install dbt
-        run: pip install dbt-core dbt-postgres  # or your adapter
-
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
