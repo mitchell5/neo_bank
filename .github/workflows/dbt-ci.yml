@@ -4,11 +4,9 @@ on:
   push:
     paths:
       - 'dbt/dbt_neobank/**'
-      - '.github/workflows/**'
   pull_request:
     paths:
       - 'dbt/dbt_neobank/**'
-      - '.github/workflows/**'
 
 jobs:
   dbt-ci:
