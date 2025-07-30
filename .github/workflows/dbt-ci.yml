@@ -1,9 +1,6 @@
 name: dbt CI
 
 on:
-  push:
-    paths:
-      - 'dbt/dbt_neobank/**'
   pull_request:
     paths:
       - 'dbt/dbt_neobank/**'
@@ -54,10 +51,12 @@ jobs:
 
       - name: Lint dbt models
         run: |
-          sqlfluff lint
+          cd dbt/dbt_neobank
+          poetry run sqlfluff lint
+
 
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
-          dbt deps
-          dbt build --fail-fast
+          poetry run dbt deps
+          poetry run dbt build --fail-fast
