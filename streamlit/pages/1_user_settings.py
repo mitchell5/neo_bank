@@ -179,7 +179,9 @@ with col_rec2:
     """)
 
 st.markdown("---")
-# ---- 3B. SQL Query to Load Transactions + Join with User Settings ----
+
+
+# ----SQL Query to Load Transactions + Join with User Settings ----
 @st.cache_data
 def load_transactions_with_user_data():
     query = """
