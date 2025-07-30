@@ -9,14 +9,14 @@ with base as (
         transaction_state,
         transaction_type
     from {{ ref('link_user_transaction') }}
-        join {{ ref('hub_transactions') }} using (transaction_hk)
-        join {{ ref('hub_users') }} using (user_hk)
-        join {{ ref('sat_trans_amount_usd') }} using (transaction_hk)
-        join {{ ref('sat_trans_cardholder') }} using (transaction_hk)
-        join {{ ref('sat_trans_creation') }} using (transaction_hk)
-        join {{ ref('sat_trans_direction') }} using (transaction_hk)
-        join {{ ref('sat_trans_state') }} using (transaction_hk)
-        join {{ ref('sat_trans_type') }} using (transaction_hk)
+    inner join {{ ref('hub_transactions') }} using (transaction_hk)
+    inner join {{ ref('hub_users') }} using (user_hk)
+    inner join {{ ref('sat_trans_amount_usd') }} using (transaction_hk)
+    inner join {{ ref('sat_trans_cardholder') }} using (transaction_hk)
+    inner join {{ ref('sat_trans_creation') }} using (transaction_hk)
+    inner join {{ ref('sat_trans_direction') }} using (transaction_hk)
+    inner join {{ ref('sat_trans_state') }} using (transaction_hk)
+    inner join {{ ref('sat_trans_type') }} using (transaction_hk)
 )
 
 select

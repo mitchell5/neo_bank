@@ -3,7 +3,7 @@ with transactions_with_user as (
         t.transaction_id,
         u.user_id,
         md5(cast(u.user_id as string)) as user_hk,
-        md5(cast(transaction_id as string)) as transaction_hk
+        md5(cast(t.transaction_id as string)) as transaction_hk
     from {{ ref('stg_transactions') }} as t
     inner join {{ ref('stg_users') }} as u
         on t.user_id = u.user_id

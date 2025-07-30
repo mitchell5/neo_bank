@@ -3,7 +3,7 @@ with notifications_with_user as (
         n.notification_id,
         u.user_id,
         md5(cast(u.user_id as string)) as user_hk,
-        md5(cast(notification_id as string)) as notification_hk
+        md5(cast(n.notification_id as string)) as notification_hk
     from {{ ref('stg_notifications') }} as n
     inner join {{ ref('stg_users') }} as u
         on n.user_id = u.user_id
