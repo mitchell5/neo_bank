@@ -62,7 +62,7 @@ jobs:
         run: |
           cd ./dbt/dbt_neobank
           dbt deps
-          dbt build --select state:modified+ --fail-fast
+          dbt build --fail-fast
 
       - name: Lint dbt models
         run: |
