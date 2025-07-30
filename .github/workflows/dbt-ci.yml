@@ -49,14 +49,13 @@ jobs:
           echo "      type: bigquery" >> ~/.dbt/profiles.yml
           echo "  target: dev" >> ~/.dbt/profiles.yml
 
-      - name: Lint dbt models
-        run: |
-          cd dbt/dbt_neobank
-          poetry run sqlfluff lint
-
-
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
           poetry run dbt deps
           poetry run dbt build --fail-fast
+
+      - name: Lint dbt models
+        run: |
+          cd dbt/dbt_neobank
+          poetry run sqlfluff lint
