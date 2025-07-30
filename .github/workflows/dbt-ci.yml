@@ -40,7 +40,7 @@ jobs:
           GCP_KEY: ${{ secrets.GCP_KEY }}
 
       - name: Setup dbt profiles.yml
-        run: |
+        run: |-
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml <<EOF
 dbt_neobank:
