@@ -29,7 +29,7 @@ jobs:
       - name: Install dbt and sqlfluff
         run: |
           pip install dbt-bigquery
-          pip install sqlfluff
+          pip install sqlfluff sqlfluff-templater-dbt
 
       - name: Setup GCP service account key
         run: |
@@ -57,13 +57,12 @@ jobs:
           echo "      type: bigquery" >> ~/.dbt/profiles.yml
           echo "  target: dev" >> ~/.dbt/profiles.yml
 
+      - name: Lint dbt models
+        run: |
+          sqlfluff lint
 
       - name: Run dbt checks
         run: |
           cd ./dbt/dbt_neobank
           dbt deps
           dbt build --fail-fast
-
-      - name: Lint dbt models
-        run: |
-          sqlfluff lint
