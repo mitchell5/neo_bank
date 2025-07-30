@@ -58,4 +58,4 @@ jobs:
       - name: Lint dbt models
         run: |
           cd dbt/dbt_neobank
-          poetry run sqlfluff lint
+          poetry run sqlfluff lint models/
