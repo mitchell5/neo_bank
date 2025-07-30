@@ -4,10 +4,11 @@ on:
   push:
     paths:
       - 'dbt/dbt_neobank/**'
+      - '.github/workflows/**'
   pull_request:
     paths:
       - 'dbt/dbt_neobank/**'
-
+      - '.github/workflows/**'
 
 jobs:
   dbt-ci:
@@ -40,7 +41,7 @@ jobs:
         env:
           GCP_KEY: ${{ secrets.GCP_KEY }}
 
-       - name: Setup dbt profiles.yml
+      - name: Setup dbt profiles.yml
         run: |
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml <<EOF
@@ -59,7 +60,6 @@ dbt_neobank:
       type: bigquery
   target: dev
 EOF
-
 
       - name: Run dbt checks
         run: |
