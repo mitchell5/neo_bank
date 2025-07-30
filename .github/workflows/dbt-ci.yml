@@ -2,11 +2,11 @@ name: dbt CI
 
 on:
   push:
-    #paths:
-    #  - 'dbt/dbt_neobank/**'
+    paths:
+      - 'dbt/dbt_neobank/**'
   pull_request:
-   # paths:
-   #   - 'dbt/dbt_neobank/**'
+    paths:
+      - 'dbt/dbt_neobank/**'
 
 
 jobs:
