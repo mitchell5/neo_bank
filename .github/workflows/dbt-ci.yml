@@ -1,0 +1,61 @@
+name: dbt CI
+
+on:
+  pull_request:
+    paths:
+      - 'dbt/dbt_neobank/**'
+
+jobs:
+  dbt-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          cd dbt/dbt_neobank
+          poetry install
+
+      - name: Setup GCP service account key
+        run: |
+          mkdir -p ~/service_account
+          echo "$GCP_KEY" > ~/gcp-key.json
+          chmod 600 ~/gcp-key.json
+        env:
+          GCP_KEY: ${{ secrets.GCP_KEY }}
+
+      - name: Setup dbt profiles.yml
+        run: |-
+          mkdir -p ~/.dbt
+          echo "dbt_neobank:" > ~/.dbt/profiles.yml
+          echo "  outputs:" >> ~/.dbt/profiles.yml
+          echo "    dev:" >> ~/.dbt/profiles.yml
+          echo "      dataset: neobank_data_raw" >> ~/.dbt/profiles.yml
+          echo "      job_execution_timeout_seconds: 300" >> ~/.dbt/profiles.yml
+          echo "      job_retries: 1" >> ~/.dbt/profiles.yml
+          echo "      keyfile: /home/runner/gcp-key.json" >> ~/.dbt/profiles.yml
+          echo "      location: EU" >> ~/.dbt/profiles.yml
+          echo "      method: service-account" >> ~/.dbt/profiles.yml
+          echo "      priority: interactive" >> ~/.dbt/profiles.yml
+          echo "      project: sacred-choir-466017-s9" >> ~/.dbt/profiles.yml
+          echo "      threads: 2" >> ~/.dbt/profiles.yml
+          echo "      type: bigquery" >> ~/.dbt/profiles.yml
+          echo "  target: dev" >> ~/.dbt/profiles.yml
+
+      - name: Run dbt checks
+        run: |
+          cd ./dbt/dbt_neobank
+          poetry run dbt deps
+          poetry run dbt build --fail-fast
+
+      - name: Lint dbt models
+        run: |
+          cd dbt/dbt_neobank
+          poetry run sqlfluff lint models/
