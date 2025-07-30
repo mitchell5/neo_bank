@@ -26,11 +26,6 @@ jobs:
           cd dbt/dbt_neobank
           poetry install
 
-      - name: Install dbt and sqlfluff
-        run: |
-          pip install dbt-bigquery
-          pip install sqlfluff sqlfluff-templater-dbt
-
       - name: Setup GCP service account key
         run: |
           mkdir -p ~/service_account
