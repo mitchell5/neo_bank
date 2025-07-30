@@ -1,4 +1,4 @@
-SELECT
-  user_id
-  ,device_type
-FROM {{ source('raw', 'devices') }}
+select
+    user_id,
+    device_type
+from {{ source('raw', 'devices') }}
