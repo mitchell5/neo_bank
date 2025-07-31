@@ -1,22 +1,22 @@
 with base as (
     select
-        user_id,
-        transaction_id,
-        amount_usd,
-        ea_cardholderpresence,
-        created_at,
-        direction,
-        transaction_state,
-        transaction_type
-    from {{ ref('link_user_transaction') }}
-    inner join {{ ref('hub_transactions') }} using (transaction_hk)
-    inner join {{ ref('hub_users') }} using (user_hk)
-    inner join {{ ref('sat_trans_amount_usd') }} using (transaction_hk)
-    inner join {{ ref('sat_trans_cardholder') }} using (transaction_hk)
-    inner join {{ ref('sat_trans_creation') }} using (transaction_hk)
-    inner join {{ ref('sat_trans_direction') }} using (transaction_hk)
-    inner join {{ ref('sat_trans_state') }} using (transaction_hk)
-    inner join {{ ref('sat_trans_type') }} using (transaction_hk)
+        hu.user_id,
+        ht.transaction_id,
+        sau.amount_usd,
+        stc.ea_cardholderpresence,
+        stcr.created_at,
+        std.direction,
+        sts.transaction_state,
+        stt.transaction_type
+    from {{ ref('link_user_transaction') }} as lut
+    inner join {{ ref('hub_transactions') }} as ht using (transaction_hk)
+    inner join {{ ref('hub_users') }} as hu using (user_hk)
+    inner join {{ ref('sat_trans_amount_usd') }} as sau using (transaction_hk)
+    inner join {{ ref('sat_trans_cardholder') }} as stc using (transaction_hk)
+    inner join {{ ref('sat_trans_creation') }} as stcr using (transaction_hk)
+    inner join {{ ref('sat_trans_direction') }} as std using (transaction_hk)
+    inner join {{ ref('sat_trans_state') }} as sts using (transaction_hk)
+    inner join {{ ref('sat_trans_type') }} as stt using (transaction_hk)
 )
 
 select
