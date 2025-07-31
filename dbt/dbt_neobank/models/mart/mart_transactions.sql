@@ -20,7 +20,7 @@ with base as (
 )
 
 select
-    date_trunc(created_at, week (monday)) as transaction_week,
+    date_trunc(created_at, month) as transaction_month,
     user_id,
     transaction_state,
     transaction_type,
@@ -31,6 +31,5 @@ select
     count(distinct transaction_id) as total_transactions,
     sum(amount_usd) as amount_usd
 from base
-where date_trunc(created_at, week (monday)) >= '2018-01-08'
 group by 1, 2, 3, 4
 order by 1, 2

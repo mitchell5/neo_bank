@@ -36,8 +36,8 @@ models:
   - name: mart_transactions
     description: a weekly view of the number of transactions per user
     columns:
-        - name: transaction_week
-          description: week of transaction date, starting monday
+        - name: transaction_month
+          description: month of transaction date
           data_tests:
             - not_null
         - name: user_id
