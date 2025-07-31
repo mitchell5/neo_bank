@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
 
     # Title
-    st.title("Notifications Analysis Test")
+    st.title("Notifications Analysis")
 
 
     # Initialize BigQuery client - Lina
