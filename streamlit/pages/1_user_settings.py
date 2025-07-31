@@ -186,7 +186,7 @@ st.markdown("---")
 def load_transactions_with_user_data():
     query = """
         SELECT
-            t.transaction_week,
+            t.transaction_month,
             t.user_id,
             t.amount_usd,
             u.country,
@@ -199,14 +199,14 @@ def load_transactions_with_user_data():
 
 # Load joined transactions data
 df_tx = load_transactions_with_user_data()
-df_tx["transaction_week"] = pd.to_datetime(df_tx["transaction_week"])
+df_tx["transaction_month"] = pd.to_datetime(df_tx["transaction_month"])
 
-# ---- Filter by selected year and month/quarter (reuse df_filtered logic) ----
-df_tx = df_tx[df_tx["transaction_week"].dt.year == selected_year]
+# ---- Filter by selected year and month/quarter ----
+df_tx = df_tx[df_tx["transaction_month"].dt.year == selected_year]
 if time_granularity == "Quarter":
-    df_tx = df_tx[df_tx["transaction_week"].dt.month.isin(quarter_map[quarter])]
+    df_tx = df_tx[df_tx["transaction_month"].dt.month.isin(quarter_map[quarter])]
 else:
-    df_tx = df_tx[df_tx["transaction_week"].dt.month == month]
+    df_tx = df_tx[df_tx["transaction_month"].dt.month == month]
 
 # ---- Aggregate revenue by country and plan ----
 df_revenue = (
