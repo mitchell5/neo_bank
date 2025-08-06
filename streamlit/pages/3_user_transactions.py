@@ -154,7 +154,7 @@ with col2b:
             ">
             Even a year after customers signed up, retention stays between 54%-60%, meaning that more than half of customers
             who sign up to this bank are still active customers (making transactions) after 12 months. This is better than
-            the fintech industry average of an annual retention rate of 48%.
+            the fintech industry average annual retention rate of 48%.
             \nSource: https://sendbird.com/blog/finance-and-payment-app-retention
             \n<em>Click on legend values to highlight them!</em>
         </div>
