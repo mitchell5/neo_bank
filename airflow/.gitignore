@@ -1,0 +1,21 @@
+./keys/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+
+# Poetry / virtualenv
+.venv/
+.env
+
+# Logs
+logs/*
+
+# Temporary DAG run / airflow DB files (if using SQLite locally)
+airflow.db
+
+# PID files
+*.pid
